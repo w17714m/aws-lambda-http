@@ -1,0 +1,23 @@
+service: aws-lambda-http-graphql-1
+
+useDotenv: true
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  environment:
+    SUPER_SECRET_PASS: '☺♠◘•♣♠○♦☺♣♪'
+
+functions:
+  main:
+    handler: dist/serverless.handler
+    events:
+      - http:
+          method: ANY
+          path: /
+      - http:
+          method: ANY
+          path: '{proxy+}'
