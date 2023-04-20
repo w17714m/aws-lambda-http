@@ -253,3 +253,11 @@ article.demo-day-fail::before {
   background-size: contain;
   background-image: url("../img/parakeet-explosion.gif");
 }
+
+article.advocate::before {
+  -webkit-filter: brightness(0.4);
+  -moz-filter: brightness(0.4);
+  filter: brightness(0.4);
+  background-size: contain;
+  background-image: url("../img/power.webp");
+}
