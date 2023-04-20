@@ -5,13 +5,12 @@ import { AppModule } from './root/app.module';
 import { configure as serverlessExpress } from '@vendia/serverless-express';
 import { Callback, Context, Handler } from "aws-lambda";
 import { DocumentBuilder, SwaggerModule } from "@nestjs/swagger";
-import { NestoLogger } from "nestolog";
+
 
 let server: Handler;
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.useGlobalPipes(new ValidationPipe());
-  app.useLogger(app.get(NestoLogger));
   app.use(cookieParser());
   const config = new DocumentBuilder()
     .setTitle('aws lambda http')

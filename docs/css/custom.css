@@ -234,6 +234,22 @@ white-space: nowrap;
 width: 270.859375px;
 }
 
+article.he-said-what::before {
+  -webkit-filter: blur(2.25px) grayscale(0.3) brightness(0.4);
+  -moz-filter: blur(2.25px) grayscale(0.3) brightness(0.4);
+  filter: blur(2.25px) grayscale(0.3) brightness(0.4);
+  background-image: url("../img/survivor-reaction.gif");
+
+}
+
 video{
   transform: scale(0.9) translateY(-50px);
+}
+
+article.demo-day-fail::before {
+  -webkit-filter: brightness(0.4);
+  -moz-filter: brightness(0.4);
+  filter: brightness(0.4);
+  background-size: contain;
+  background-image: url("../img/parakeet-explosion.gif");
 }

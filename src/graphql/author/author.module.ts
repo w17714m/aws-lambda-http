@@ -2,6 +2,6 @@ import { Module } from '@nestjs/common';
 import { AuthorResolver } from './author.resolver';
 
 @Module({
-  providers: [AuthorResolver],
+  providers: [ AuthorResolver ],
 })
 export class AuthorModule {}
